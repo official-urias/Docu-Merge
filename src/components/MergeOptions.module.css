@@ -1,0 +1,112 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 14px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition);
+}
+
+.card:hover {
+  border-color: var(--blue-300);
+  background: var(--blue-50);
+  box-shadow: var(--shadow-sm);
+}
+
+.active {
+  border-color: var(--blue-500) !important;
+  background: var(--blue-50) !important;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.12) !important;
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  transition: all var(--transition);
+}
+
+.cardIconActive {
+  background: var(--blue-100);
+  color: var(--blue-600);
+}
+
+.card:hover .cardIcon {
+  background: var(--blue-100);
+  color: var(--blue-600);
+}
+
+.cardLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.cardDesc {
+  font-size: 11px;
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.input {
+  width: 100%;
+  max-width: 360px;
+  padding: 9px 12px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--gray-800);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input:focus {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.12);
+}
+
+.input::placeholder {
+  color: var(--gray-400);
+}

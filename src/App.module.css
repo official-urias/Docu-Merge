@@ -1,0 +1,212 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+/* ── Header ───────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.headerInner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--blue-600);
+  color: white;
+}
+
+.logoText {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.3px;
+}
+
+.pills {
+  display: flex;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ── Hero ────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 56px 24px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.heroSub {
+  font-size: 16px;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* ── Main card ────────────────────────────── */
+.main {
+  flex: 1;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clearBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-400);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all var(--transition);
+  align-self: flex-end;
+}
+
+.clearBtn:hover {
+  color: var(--red-500);
+  background: var(--red-50);
+}
+
+.divider {
+  height: 1px;
+  background: var(--gray-100);
+  margin: 0 -28px;
+}
+
+/* ── Features ────────────────────────────── */
+.features {
+  background: var(--white);
+  border-top: 1px solid var(--gray-100);
+  padding: 40px 24px;
+}
+
+.featuresInner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.featureIcon {
+  font-size: 22px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.featureTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 2px;
+}
+
+.featureSub {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+/* ── Footer ──────────────────────────────── */
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--gray-100);
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 600px) {
+  .card {
+    padding: 18px;
+  }
+  .divider {
+    margin: 0 -18px;
+  }
+  .pills {
+    display: none;
+  }
+  .featuresInner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
