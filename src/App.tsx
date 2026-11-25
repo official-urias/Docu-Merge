@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Layers, Shield, Cpu, Trash2 } from 'lucide-react'
 import type { DocFile } from './utils/fileTypes'
 import { detectType, uid } from './utils/fileTypes'
