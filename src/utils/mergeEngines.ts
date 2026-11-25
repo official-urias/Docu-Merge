@@ -14,7 +14,7 @@ export async function mergePDFs(docs: DocFile[]): Promise<Blob> {
   }
 
   const pdfBytes = await merged.save()
-  return new Blob([pdfBytes], { type: 'application/pdf' })
+  return new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' })
 }
 
 // ── Images → PDF ──────────────────────────────────────────────
@@ -34,7 +34,7 @@ export async function imagesPDF(docs: DocFile[]): Promise<Blob> {
   }
 
   const pdfBytes = await merged.save()
-  return new Blob([pdfBytes], { type: 'application/pdf' })
+  return new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' })
 }
 
 // ── Text → single TXT ────────────────────────────────────────
@@ -125,7 +125,7 @@ export async function mergeMixed(docs: DocFile[]): Promise<Blob> {
   }
 
   const pdfBytes = await merged.save()
-  return new Blob([pdfBytes], { type: 'application/pdf' })
+  return new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' })
 }
 
 export function downloadBlob(blob: Blob, filename: string) {
